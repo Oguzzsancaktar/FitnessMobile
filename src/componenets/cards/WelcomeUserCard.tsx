@@ -12,8 +12,8 @@ interface IProps {
 
 const WelcomeUserCard: React.FC<IProps> = ({firstLineText, secondLineText}) => {
   return (
-    <View style={{paddingHorizontal: 20}}>
-      {React.createElement(selectSvg('logo'), {
+    <View>
+      {selectSvg('logo', {
         width: 45,
         height: 45,
         marginBottom: 20,

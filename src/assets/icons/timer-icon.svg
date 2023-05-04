@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="20.951" height="20.956" viewBox="0 0 20.951 20.956">
+  <g id="Icon_ionic-ios-timer" data-name="Icon ionic-ios-timer" transform="translate(0.15 0.15)">
+    <path id="Pfad_63" data-name="Pfad 63"
+      d="M14.266,24.594A10.328,10.328,0,0,1,7.1,6.829.829.829,0,1,1,8.25,8.022a8.668,8.668,0,1,0,6.842-2.386V8.869a.831.831,0,1,1-1.663,0v-4.1a.831.831,0,0,1,.831-.831,10.328,10.328,0,0,1,.005,20.656Z"
+      transform="translate(-3.937 -3.938)" fill="currentColor" stroke="currentColor" stroke-width="0.3" />
+    <path id="Pfad_64" data-name="Pfad 64"
+      d="M12.072,11.349l5.138,3.692a1.555,1.555,0,1,1-1.807,2.53,1.5,1.5,0,0,1-.361-.361l-3.692-5.138a.518.518,0,0,1,.723-.723Z"
+      transform="translate(-5.88 -5.88)" fill="currentColor" stroke="currentColor" stroke-width="0.3" />
+  </g>
+</svg>

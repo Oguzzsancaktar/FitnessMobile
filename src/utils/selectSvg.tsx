@@ -1,3 +1,9 @@
+import React from 'react';
+
+import arrowUpSvg from '../assets/icons/arrow-up-icon.svg';
+import timerSvg from '../assets/icons/timer-icon.svg';
+import burnSvg from '../assets/icons/burn-icon.svg';
+import watchSvg from '../assets/icons/watch-icon.svg';
 import searchListSvg from '../assets/icons/search-list-icon.svg';
 import chatSvg from '../assets/icons/chat-icon.svg';
 import homeSvg from '../assets/icons/home-icon.svg';
@@ -16,6 +22,10 @@ import pinSvg from '../assets/icons/pin-icon.svg';
 import logoSvg from '../assets/icons/logo-icon.svg';
 
 export type ISvgNames =
+  | 'arrow-up'
+  | 'timer'
+  | 'burn'
+  | 'watch'
   | 'search-list'
   | 'chat'
   | 'home'
@@ -33,43 +43,76 @@ export type ISvgNames =
   | 'pin'
   | 'logo';
 
-const selectSvg = (name: ISvgNames) => {
+const selectSvg = (name: ISvgNames, options?: any) => {
+  let icon = burnSvg;
+
   switch (name) {
+    case 'arrow-up':
+      icon = arrowUpSvg;
+      break;
+    case 'timer':
+      icon = timerSvg;
+      break;
+    case 'burn':
+      icon = burnSvg;
+      break;
+    case 'watch':
+      icon = watchSvg;
+      break;
     case 'search-list':
-      return searchListSvg;
+      icon = searchListSvg;
+      break;
     case 'chat':
-      return chatSvg;
+      icon = chatSvg;
+      break;
     case 'home':
-      return homeSvg;
+      icon = homeSvg;
+      break;
     case 'health':
-      return healthSvg;
+      icon = healthSvg;
+      break;
     case 'profile':
-      return profileSvg;
+      icon = profileSvg;
+      break;
     case 'bottle':
-      return bottleSvg;
+      icon = bottleSvg;
+      break;
     case 'running':
-      return runningSvg;
+      icon = runningSvg;
+      break;
     case 'football':
-      return footballSvg;
+      icon = footballSvg;
+      break;
     case 'fitness':
-      return fitnessSvg;
+      icon = fitnessSvg;
+      break;
     case 'basketball':
-      return basketballSvg;
+      icon = basketballSvg;
+      break;
     case 'cycling':
-      return cyclingSvg;
+      icon = cyclingSvg;
+      break;
     case 'yoga':
-      return yogaSvg;
+      icon = yogaSvg;
+      break;
     case 'verified':
-      return verifiedSvg;
+      icon = verifiedSvg;
+      break;
     case 'star':
-      return starSvg;
+      icon = starSvg;
+      break;
     case 'pin':
-      return pinSvg;
+      icon = pinSvg;
+      break;
     case 'logo':
-      return logoSvg;
+      icon = logoSvg;
+      break;
     default:
-      return searchListSvg;
+      icon = searchListSvg;
+      break;
   }
+
+  return React.createElement(icon, options);
 };
 
 export default selectSvg;

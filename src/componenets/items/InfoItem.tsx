@@ -8,8 +8,9 @@ interface IProps {
   icon: ISvgNames;
   text: string;
   color?: string;
+  bottomText?: string;
 }
-const SportCard: React.FC<IProps> = ({color, text, icon}) => {
+const InfoItem: React.FC<IProps> = ({color, text, icon, bottomText}) => {
   return (
     <View
       style={{
@@ -19,7 +20,7 @@ const SportCard: React.FC<IProps> = ({color, text, icon}) => {
         alignItems: 'center',
         justifyContent: 'center',
       }}>
-      {React.createElement(selectSvg(icon))}
+      {selectSvg(icon, {style: {color: Colors.white}})}
 
       <Text
         style={{
@@ -38,8 +39,26 @@ const SportCard: React.FC<IProps> = ({color, text, icon}) => {
         }}>
         {text}
       </Text>
+      {bottomText && (
+        <Text
+          style={{
+            width: '100%',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            textAlign: 'center',
+            fontSize: 12,
+            color: Colors.white,
+            fontWeight: '400',
+            lineHeight: 13,
+            marginTop: 10,
+            maxWidth: 80,
+          }}>
+          {bottomText}
+        </Text>
+      )}
     </View>
   );
 };
 
-export default SportCard;
+export default InfoItem;

@@ -16,7 +16,7 @@ const TrainerFilter = () => {
           alignItems: 'center',
           justifyContent: 'center',
         }}>
-        {React.createElement(selectSvg('profile'), {
+        {selectSvg('profile', {
           style: {position: 'absolute', color: Colors.white},
           height: 15,
           width: 15,

@@ -1,7 +1,7 @@
 import React from 'react';
 import {Text, View} from 'react-native';
 import {Colors} from '../../constants';
-import SportCard from './SportCard';
+import InfoItem from '../items/InfoItem';
 
 const SportListCard = () => {
   return (
@@ -25,19 +25,15 @@ const SportListCard = () => {
           height: 130,
         }}>
         <View style={{flex: 1}}>
-          <SportCard color={Colors.tenn} text="Running" icon="running" />
+          <InfoItem color={Colors.tenn} text="Running" icon="running" />
         </View>
 
         <View style={{flex: 1, marginHorizontal: 10}}>
-          <SportCard
-            color={Colors.blueZodiac}
-            text="Football"
-            icon="football"
-          />
+          <InfoItem color={Colors.blueZodiac} text="Football" icon="football" />
         </View>
 
         <View style={{flex: 1}}>
-          <SportCard
+          <InfoItem
             color={Colors.priwinkleBlue}
             text="Fitness"
             icon="fitness"
@@ -55,7 +51,7 @@ const SportListCard = () => {
         }}>
         {/* <Image source={bottleIcon} style={{marginRight: 5}} /> */}
         <View style={{flex: 1}}>
-          <SportCard
+          <InfoItem
             color={Colors.eastSide}
             text="Basketball"
             icon="basketball"
@@ -63,11 +59,11 @@ const SportListCard = () => {
         </View>
 
         <View style={{flex: 1, marginHorizontal: 10}}>
-          <SportCard color={Colors.zombie} text="Cycling" icon="cycling" />
+          <InfoItem color={Colors.zombie} text="Cycling" icon="cycling" />
         </View>
 
         <View style={{flex: 1}}>
-          <SportCard color={Colors.olivine} text="Yoga" icon="yoga" />
+          <InfoItem color={Colors.olivine} text="Yoga" icon="yoga" />
         </View>
       </View>
     </View>

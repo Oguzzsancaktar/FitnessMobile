@@ -1,7 +1,6 @@
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import {NavigationContainer} from '@react-navigation/native';
-import {MainScreen} from './src';
-import SearchScreen from './src/views/SearchScreen';
+import {HealthScreen, MainScreen, SearchScreen} from './src';
 import {View} from 'react-native';
 import {Colors} from './src/constants';
 
@@ -88,7 +87,7 @@ function App() {
                   alignItems: 'center',
                   marginBottom: -28,
                 }}>
-                {React.createElement(selectSvg(iconName), {
+                {selectSvg(iconName, {
                   style: {color},
                   height: 75,
                 })}
@@ -96,6 +95,11 @@ function App() {
             );
           },
         })}>
+        <Tab.Screen
+          options={{headerShown: false}}
+          name="Health"
+          component={HealthScreen}
+        />
         <Tab.Screen
           options={{
             headerShown: false,
@@ -112,11 +116,6 @@ function App() {
           options={{headerShown: false}}
           name="Home"
           component={MainScreen}
-        />
-        <Tab.Screen
-          options={{headerShown: false}}
-          name="Health"
-          component={SearchScreen}
         />
         <Tab.Screen
           options={{headerShown: false}}

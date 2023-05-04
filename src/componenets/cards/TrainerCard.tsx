@@ -31,7 +31,7 @@ const TrainerCard = () => {
                 marginTop: 5,
               },
             ]}>
-            {React.createElement(selectSvg('pin'), {
+            {selectSvg('pin', {
               width: 9,
               height: 13,
               marginRight: 5,
@@ -54,13 +54,13 @@ const TrainerCard = () => {
             right: 10,
           },
         ]}>
-        {React.createElement(selectSvg('star'), {
+        {selectSvg('star', {
           width: 30,
           height: 30,
           marginRight: 5,
         })}
 
-        {React.createElement(selectSvg('verified'), {
+        {selectSvg('verified', {
           width: 30,
           height: 30,
         })}
