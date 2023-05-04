@@ -1,17 +1,19 @@
 import React from 'react';
-import {Image, SafeAreaView, Text, TextInput, View} from 'react-native';
+import {SafeAreaView, Text, TextInput, View} from 'react-native';
 import {Colors} from '../../constants';
-import icon from '../../assets/icons/search-icon.png';
 
 const TrainerSearchbar = () => {
   return (
-    <View style={{paddingVertical: 30}}>
+    <View>
       <Text
         style={{
           marginBottom: 20,
           fontSize: 20,
+          lineHeight: 19,
+          paddingHorizontal: 20,
           fontWeight: '600',
           letterSpacing: 1,
+          maxWidth: 260,
         }}>
         Find the best trainers in your area
       </Text>
@@ -24,10 +26,10 @@ const TrainerSearchbar = () => {
           justifyContent: 'center',
         }}>
         <SafeAreaView style={{width: '100%'}}>
-          <Image
+          {/* <Image
             source={icon}
             style={{position: 'absolute', right: 20, top: 15}}
-          />
+          /> */}
           <TextInput
             style={{
               borderWidth: 2,

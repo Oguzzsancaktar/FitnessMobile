@@ -1,35 +1,42 @@
 import React from 'react';
-import {Image, Text, View} from 'react-native';
-
-import icon from '../../assets/icons/bottle.png';
+import {Text, View} from 'react-native';
+import {selectSvg} from '../../utils';
+import {ISvgNames} from '../../utils/selectSvg';
+import {Colors} from 'react-native/Libraries/NewAppScreen';
 
 interface IProps {
+  icon: ISvgNames;
+  text: string;
   color?: string;
 }
-const SportCard: React.FC<IProps> = ({color}) => {
+const SportCard: React.FC<IProps> = ({color, text, icon}) => {
   return (
     <View
       style={{
         backgroundColor: color,
-        borderRadius: 10,
-        width: '32%',
-        height: 120,
+        borderRadius: 20,
+        height: '100%',
         alignItems: 'center',
         justifyContent: 'center',
       }}>
-      <Image source={icon} />
+      {React.createElement(selectSvg(icon))}
+
       <Text
         style={{
           width: '100%',
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center',
           textAlign: 'center',
-          fontSize: 20,
-          color: 'white',
-          fontWeight: '700',
+          fontSize: 18,
+          color: Colors.white,
+          fontWeight: '800',
+          lineHeight: 35,
           backgroundColor: 'rgba(0,0,0,0.2)',
-          paddingVertical: 10,
           marginTop: 10,
+          height: 35,
         }}>
-        Runnind
+        {text}
       </Text>
     </View>
   );

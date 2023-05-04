@@ -1,8 +1,6 @@
 import React from 'react';
-import {Button, Image, Text, View} from 'react-native';
+import {Button, Text, View} from 'react-native';
 import {Colors} from '../../constants';
-
-import bottleIcon from '../../assets/icons/bottle.png';
 
 const FindTrainerCard = () => {
   return (
@@ -24,7 +22,7 @@ const FindTrainerCard = () => {
           alignItems: 'center',
           justifyContent: 'center',
         }}>
-        <Image source={bottleIcon} style={{marginRight: 5}} />
+        {/* <Image source={bottleIcon} style={{marginRight: 5}} /> */}
         <Text>Did you start your day with 2 cups of water?</Text>
       </View>
       <View

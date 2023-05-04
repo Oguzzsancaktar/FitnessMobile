@@ -2,11 +2,9 @@ import React from 'react';
 import {Pressable, Image, StyleSheet, Text, View} from 'react-native';
 import {fontStyles} from '../../constants/fontStyles';
 import {Colors} from '../../constants';
+import {selectSvg} from '../../utils';
 
 const trainerImage = require('../../assets/trainer-profile.png');
-const starIcon = require('../../assets/icons/star-icon.png');
-const verifiedIcon = require('../../assets/icons/verified-icon.png');
-const pinIcon = require('../../assets/icons/pin-icon.png');
 
 const TrainerCard = () => {
   return (
@@ -33,10 +31,12 @@ const TrainerCard = () => {
                 marginTop: 5,
               },
             ]}>
-            <Image
-              style={{width: 9, height: 13, marginRight: 5}}
-              source={pinIcon}
-            />
+            {React.createElement(selectSvg('pin'), {
+              width: 9,
+              height: 13,
+              marginRight: 5,
+            })}
+
             <Text style={fontStyles.textLight13}>
               2,3 km from your location
             </Text>
@@ -54,11 +54,16 @@ const TrainerCard = () => {
             right: 10,
           },
         ]}>
-        <Image
-          style={{width: 30, height: 30, marginRight: 5}}
-          source={starIcon}
-        />
-        <Image style={{width: 30, height: 30}} source={verifiedIcon} />
+        {React.createElement(selectSvg('star'), {
+          width: 30,
+          height: 30,
+          marginRight: 5,
+        })}
+
+        {React.createElement(selectSvg('verified'), {
+          width: 30,
+          height: 30,
+        })}
       </View>
 
       <View style={styles.infoButtonDiv}>
@@ -79,7 +84,7 @@ export default TrainerCard;
 
 const styles = StyleSheet.create({
   container: {
-    backgroundColor: 'white',
+    backgroundColor: Colors.white,
     borderRadius: 5,
     padding: 10,
     marginHorizontal: 3,
@@ -112,7 +117,7 @@ const styles = StyleSheet.create({
   buttonText: {
     padding: 5,
     textAlign: 'center',
-    color: 'white',
+    color: Colors.white,
     fontSize: 12,
     fontWeight: 'bold',
   },

@@ -1,8 +1,30 @@
 import React from 'react';
-import {Text} from 'react-native';
+import {Button, View} from 'react-native';
+import {selectSvg} from '../../utils';
+import {Colors} from '../../constants';
 
 const TrainerFilter = () => {
-  return <Text>TrainerFilter</Text>;
+  return (
+    <View style={{height: 35}}>
+      <View
+        style={{
+          width: 35,
+          height: 35,
+          backgroundColor: Colors.priwinkleBlue,
+          borderRadius: 10,
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center',
+        }}>
+        {React.createElement(selectSvg('profile'), {
+          style: {position: 'absolute', color: Colors.white},
+          height: 15,
+          width: 15,
+        })}
+        <Button title="" />
+      </View>
+    </View>
+  );
 };
 
 export default TrainerFilter;

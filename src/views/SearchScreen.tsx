@@ -6,14 +6,24 @@ import {
   TrainerSearchbar,
 } from '../componenets';
 import {ScrollView, View} from 'react-native';
+import {Colors} from '../constants';
 
 const SearchScreen = () => {
   return (
     <View
-      style={{paddingTop: 60, paddingHorizontal: 25, backgroundColor: 'white'}}>
-      <WelcomeUserCard />
-      <TrainerSearchbar />
-      <TrainerFilter />
+      style={{
+        paddingTop: 60,
+        paddingHorizontal: 20,
+        backgroundColor: Colors.white,
+      }}>
+      <WelcomeUserCard firstLineText="Trainer" secondLineText={'Search'} />
+      <View style={{marginTop: 30}}>
+        <TrainerSearchbar />
+      </View>
+
+      <View style={{marginVertical: 30}}>
+        <TrainerFilter />
+      </View>
       <ScrollView
         showsHorizontalScrollIndicator={false}
         contentContainerStyle={{

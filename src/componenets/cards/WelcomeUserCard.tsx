@@ -1,33 +1,57 @@
 import React from 'react';
 import {Text, View, Image} from 'react-native';
 import {Colors} from '../../constants';
+import {selectSvg} from '../../utils';
 
 const trainerImage = require('../../assets/trainer-profile.png');
-const logo = require('../../assets/logo.png');
 
-const WelcomeUserCard = () => {
+interface IProps {
+  firstLineText: string;
+  secondLineText: string;
+}
+
+const WelcomeUserCard: React.FC<IProps> = ({firstLineText, secondLineText}) => {
   return (
-    <View>
-      <Image source={logo} style={{width: 60, height: 60}} />
+    <View style={{paddingHorizontal: 20}}>
+      {React.createElement(selectSvg('logo'), {
+        width: 45,
+        height: 45,
+        marginBottom: 20,
+      })}
       <View style={{flexDirection: 'row', justifyContent: 'space-between'}}>
-        <View style={{width: 260}}>
-          <Text style={{fontSize: 35, fontWeight: '700', letterSpacing: 3}}>
-            Welcome{' '}
+        <View style={{width: 250}}>
+          <Text
+            style={{
+              fontSize: 30,
+              lineHeight: 29,
+              fontWeight: '700',
+              letterSpacing: 1,
+              textTransform: 'uppercase',
+            }}>
+            {firstLineText}
           </Text>
-          <Text style={{fontSize: 35, fontWeight: '700', letterSpacing: 3}}>
-            Back,Sam
+          <Text
+            style={{
+              fontSize: 30,
+              lineHeight: 29,
+              fontWeight: '700',
+              letterSpacing: 1,
+              textTransform: 'uppercase',
+            }}>
+            {secondLineText}
           </Text>
         </View>
         <View
           style={{
-            width: 80,
+            width: 70,
+            height: 70,
             borderRadius: 50,
             overflow: 'hidden',
             borderStyle: 'solid',
-            borderWidth: 2,
-            borderColor: Colors.blueZodiac,
+            borderWidth: 3,
+            borderColor: Colors.priwinkleBlue,
           }}>
-          <Image source={trainerImage} style={{width: 80, height: 80}} />
+          <Image source={trainerImage} style={{width: 70, height: 70}} />
         </View>
       </View>
     </View>
