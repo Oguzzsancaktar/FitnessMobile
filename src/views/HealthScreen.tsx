@@ -9,7 +9,7 @@ import {
 } from '../componenets';
 import {Colors} from '../constants';
 
-const MainScreen = () => {
+const HealthScreen = () => {
   return (
     <ScrollView
       style={{
@@ -53,4 +53,4 @@ const MainScreen = () => {
   );
 };
 
-export default MainScreen;
+export default HealthScreen;
