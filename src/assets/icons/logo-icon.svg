@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="45.105" height="45.105"
+  viewBox="0 0 45.105 45.105">
+  <defs>
+    <radialGradient id="radial-gradient" cx="0.5" cy="0.5" r="0.5" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#fff" />
+      <stop offset="0.514" stop-color="#fcfcfc" />
+      <stop offset="0.732" stop-color="#f5f5f5" />
+      <stop offset="0.893" stop-color="#e9e9e9" />
+      <stop offset="1" stop-color="#dcdcdc" />
+    </radialGradient>
+    <radialGradient id="radial-gradient-2" cx="0.334" cy="0.153" r="0.739" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#b7cae5" />
+      <stop offset="0.341" stop-color="#b4c7e3" />
+      <stop offset="0.494" stop-color="#adc0dc" />
+      <stop offset="0.61" stop-color="#a0b4d0" />
+      <stop offset="0.707" stop-color="#8ea2c0" />
+      <stop offset="0.792" stop-color="#778caa" />
+      <stop offset="0.87" stop-color="#5a7090" />
+      <stop offset="0.939" stop-color="#384f71" />
+      <stop offset="1" stop-color="#142c50" />
+    </radialGradient>
+    <radialGradient id="radial-gradient-3" cx="0.612" cy="0.405" r="0.577" xlink:href="#radial-gradient-2">
+      <stop offset="0.707" stop-color="#8ea2c0" />
+      <stop offset="0.792" stop-color="#778caa" />
+      <stop offset="0.87" stop-color="#5a7090" />
+      <stop offset="0.939" stop-color="#384f71" />
+      <stop offset="1" stop-color="#142c50" />
+    </radialGradient>
+
+    <radialGradient id="radial-gradient-4" cx="0.5" cy="0.5" r="0.988" xlink:href="#radial-gradient-2">
+      <stop offset="0.707" stop-color="#8ea2c0" />
+      <stop offset="0.792" stop-color="#778caa" />
+      <stop offset="1" stop-color="#142c50" />
+    </radialGradient>
+  </defs>
+  <g id="Gruppe_23" data-name="Gruppe 23" transform="translate(-118.966 -671.663)">
+    <rect id="Rechteck_48" data-name="Rechteck 48" width="45.105" height="45.105" rx="22.552"
+      transform="translate(118.966 671.663)" fill="url(#radial-gradient)" />
+    <g id="Gruppe_24" data-name="Gruppe 24" transform="translate(118.966 671.663)">
+      <path id="Pfad_286" data-name="Pfad 286"
+        d="M170.7,691.214a3.664,3.664,0,0,1-2.288,2.448c-5.132,2.458-13.5,3.968-19.8,4.808.746,2.514-2.9,6.919-.7,6.786,3.152-.189,17.057-5.4,16.684-.651-.5,6.327-16.791,1.925-17.881,5.254-1.385,4.221-1.378,11.184-3.66,13.047A22.554,22.554,0,0,0,170.7,691.214Z"
+        transform="translate(-128.186 -679.145)" fill-rule="evenodd" fill="url(#radial-gradient-2)" />
+      <path id="Pfad_287" data-name="Pfad 287"
+        d="M132.119,702.362c.314-1.268-5.9.133-5-1.417.642-1.1,5.373-1.578,5.809-2.632.7-1.693,2.738-7.117.065-6.96-2.766.165-9.5,2.114-7.253-2.377.21-.905,1.993-1.953,3-2.024,10.919-.778,21.28-.58,31-6.021a22.551,22.551,0,1,0-29.117,33.03C129.986,710.967,131.4,705.27,132.119,702.362Z"
+        transform="translate(-118.966 -671.663)" fill-rule="evenodd" fill="url(#radial-gradient-3)" />
+      <g id="Gruppe_23-2" data-name="Gruppe 23" transform="translate(3.892 2.441)"
+        style="mix-blend-mode: lighten;isolation: isolate">
+        <path id="Pfad_288" data-name="Pfad 288"
+          d="M148.509,680.451a36.1,36.1,0,0,1,9.557,1.294c.073-.031.146-.057.218-.09a20.346,20.346,0,0,0-14.353-6.037A20.131,20.131,0,0,0,125.27,688.27a37.606,37.606,0,0,1,4.265-2.466A36.483,36.483,0,0,1,148.509,680.451Z"
+          transform="translate(-125.27 -675.618)" fill-rule="evenodd" fill="url(#radial-gradient-4)" />
+      </g>
+    </g>
+  </g>
+</svg>
