@@ -35,7 +35,7 @@ const TrainingSessionItem = () => {
             lineHeight: 16,
             color: Colors.xanadu,
           }}>
-          Running Session Tuesday,
+          Running Session
         </Text>
         <Text
           style={{
@@ -44,7 +44,7 @@ const TrainingSessionItem = () => {
             lineHeight: 16,
             color: Colors.xanadu,
           }}>
-          02/05/2023
+          Tuesday, 02/05/2023
         </Text>
       </View>
 

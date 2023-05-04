@@ -1,11 +1,18 @@
 import React from 'react';
-import {View, Text} from 'react-native';
+import {Colors} from '../constants';
+import {Text, View} from 'react-native';
+import {TrainingResultCard} from '../componenets';
+import {TrainingSessionItem} from '../componenets/items';
 
-import {TrainingSessionItem} from '../items';
-
-const LastTrainingCard = () => {
+const TrainingDetailScreen = () => {
   return (
-    <View>
+    <View
+      style={{
+        paddingTop: 20,
+        paddingHorizontal: 25,
+        backgroundColor: Colors.alabaster,
+        height: '100%',
+      }}>
       <View
         style={{
           display: 'flex',
@@ -34,10 +41,13 @@ const LastTrainingCard = () => {
           with
         </Text>
       </View>
-
       <TrainingSessionItem />
+
+      <View style={{marginTop: 30}}>
+        <TrainingResultCard />
+      </View>
     </View>
   );
 };
 
-export default LastTrainingCard;
+export default TrainingDetailScreen;
