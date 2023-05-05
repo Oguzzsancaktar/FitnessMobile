@@ -21,12 +21,15 @@ const SearchScreen = () => {
         <TrainerSearchbar />
       </View>
 
-      <View style={{marginVertical: 30}}>
+      <View style={{marginVertical: 30, zIndex: 2}}>
         <TrainerFilter />
       </View>
       <ScrollView
+        style={{marginBottom: 100, paddingBottom: 100}}
         showsHorizontalScrollIndicator={false}
         contentContainerStyle={{
+          position: 'relative',
+          zIndex: 1,
           flexGrow: 1,
           justifyContent: 'center',
           width: '100%',
@@ -37,7 +40,9 @@ const SearchScreen = () => {
         <TrainerCard />
         <TrainerCard />
         <TrainerCard />
-        <TrainerCard />
+        <View style={{marginBottom: 250, paddingBottom: 100}}>
+          <TrainerCard />
+        </View>
       </ScrollView>
     </View>
   );

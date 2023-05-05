@@ -1,6 +1,7 @@
 import React from 'react';
 import {SafeAreaView, Text, TextInput, View} from 'react-native';
 import {Colors} from '../../constants';
+import {selectSvg} from '../../utils';
 
 const TrainerSearchbar = () => {
   return (
@@ -10,7 +11,6 @@ const TrainerSearchbar = () => {
           marginBottom: 20,
           fontSize: 20,
           lineHeight: 19,
-          paddingHorizontal: 20,
           fontWeight: '600',
           letterSpacing: 1,
           maxWidth: 260,
@@ -26,10 +26,14 @@ const TrainerSearchbar = () => {
           justifyContent: 'center',
         }}>
         <SafeAreaView style={{width: '100%'}}>
-          {/* <Image
-            source={icon}
-            style={{position: 'absolute', right: 20, top: 15}}
-          /> */}
+          {selectSvg('search', {
+            style: {
+              color: Colors.blueZodiac,
+              position: 'absolute',
+              right: 20,
+              top: 15,
+            },
+          })}
           <TextInput
             style={{
               borderWidth: 2,

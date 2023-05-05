@@ -35,6 +35,7 @@ const TrainerCard = () => {
               width: 9,
               height: 13,
               marginRight: 5,
+              style: {color: Colors.blueZodiac},
             })}
 
             <Text style={fontStyles.textLight13}>
@@ -102,7 +103,7 @@ const styles = StyleSheet.create({
   },
   info: {
     ...fontStyles.textLight12,
-    width: 260,
+    width: 290,
     marginRight: 10,
   },
   button: {

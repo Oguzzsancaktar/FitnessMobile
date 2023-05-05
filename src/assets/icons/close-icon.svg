@@ -1,0 +1,7 @@
+<svg id="Icon_close" xmlns="http://www.w3.org/2000/svg" width="10.485" height="10.485" viewBox="0 0 10.485 10.485">
+  <g id="Icon_close-2" data-name="Icon_close" transform="translate(-0.757 -0.757)">
+    <path id="Path"
+      d="M.293.293a1,1,0,0,0,0,1.414L3.828,5.243.293,8.778a1,1,0,0,0,1.414,1.414L5.243,6.657l3.535,3.536a1,1,0,1,0,1.414-1.414L6.657,5.243l3.535-3.536A1,1,0,1,0,8.778.293L5.243,3.828,1.707.293A1,1,0,0,0,.293.293Z"
+      transform="translate(0.757 0.757)" fill="currentColor" />
+  </g>
+</svg>

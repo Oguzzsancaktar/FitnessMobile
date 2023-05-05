@@ -12,4 +12,6 @@ export const Colors = Object.freeze({
   zombie: '#DDD78C',
   olivine: '#85B969',
   priwinkleBlue: '#B7CAE5',
+
+  black: '#000000',
 });
