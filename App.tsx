@@ -97,11 +97,6 @@ function App() {
           },
         })}>
         <Tab.Screen
-          options={{headerShown: false}}
-          name="Health"
-          component={HealthScreen}
-        />
-        <Tab.Screen
           options={{
             headerShown: false,
           }}
@@ -110,14 +105,21 @@ function App() {
         />
         <Tab.Screen
           options={{headerShown: false}}
-          name="Chat"
-          component={SearchScreen}
-        />
-        <Tab.Screen
-          options={{headerShown: false}}
           name="Home"
           component={MainScreen}
         />
+        <Tab.Screen
+          options={{headerShown: false}}
+          name="Health"
+          component={HealthScreen}
+        />
+
+        <Tab.Screen
+          options={{headerShown: false}}
+          name="Chat"
+          component={SearchScreen}
+        />
+
         <Tab.Screen
           options={{headerShown: false}}
           name="Profile"

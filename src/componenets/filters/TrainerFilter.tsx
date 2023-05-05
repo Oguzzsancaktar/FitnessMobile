@@ -4,6 +4,7 @@ import {selectSvg} from '../../utils';
 import {Colors} from '../../constants';
 
 const TrainerFilter = () => {
+  const [selectedValue, setSelectedValue] = React.useState('java');
   return (
     <View style={{height: 35}}>
       <View
