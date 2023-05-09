@@ -1,5 +1,6 @@
 import React from 'react';
 
+import heartSvg from '../assets/icons/heart-icon.svg';
 import closeSvg from '../assets/icons/close-icon.svg';
 import searchSvg from '../assets/icons/search-icon.svg';
 import chevronBottomSvg from '../assets/icons/chevron-bottom-icon.svg';
@@ -25,6 +26,7 @@ import pinSvg from '../assets/icons/pin-icon.svg';
 import logoSvg from '../assets/icons/logo-icon.svg';
 
 export type ISvgNames =
+  | 'heart'
   | 'close'
   | 'search'
   | 'chevron-bottom'
@@ -53,6 +55,9 @@ const selectSvg = (name: ISvgNames, options?: any) => {
   let icon = burnSvg;
 
   switch (name) {
+    case 'heart':
+      icon = heartSvg;
+      break;
     case 'close':
       icon = closeSvg;
       break;

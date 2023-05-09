@@ -3,3 +3,4 @@ export {default as HealthScreen} from './HealthScreen';
 export {default as SearchScreen} from './SearchScreen';
 export {default as TrainingHistoryScreen} from './TrainingHistoryScreen';
 export {default as TrainingDetailScreen} from './TrainingDetailScreen';
+export {default as TrainerProfile} from './TrainerProfile';
