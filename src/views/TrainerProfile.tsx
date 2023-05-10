@@ -2,13 +2,17 @@ import React from 'react';
 import {ScrollView, Text, View, Image} from 'react-native';
 import {Colors} from '../constants';
 import {selectSvg} from '../utils';
-import {StoriesCard} from '../componenets';
+import {StoriesCard, TrainerPostsCard} from '../componenets';
 
 const trainerImage = require('../assets/trainer-profile.png');
 
 const TrainerProfile = () => {
   return (
-    <ScrollView style={{paddingHorizontal: 35, backgroundColor: Colors.white}}>
+    <ScrollView
+      style={{
+        paddingHorizontal: 35,
+        backgroundColor: Colors.alabaster,
+      }}>
       <View
         style={{
           display: 'flex',
@@ -180,7 +184,13 @@ const TrainerProfile = () => {
           </View>
         </View>
       </View>
-      <StoriesCard />
+      <View style={{marginVertical: 20}}>
+        <StoriesCard />
+      </View>
+
+      <View style={{marginBottom: 100}}>
+        <TrainerPostsCard />
+      </View>
     </ScrollView>
   );
 };

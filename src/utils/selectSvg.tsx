@@ -1,5 +1,7 @@
 import React from 'react';
 
+import gridViewSvg from '../assets/icons/grid-view-icon.svg';
+import listViewSvg from '../assets/icons/list-view-icon.svg';
 import heartSvg from '../assets/icons/heart-icon.svg';
 import closeSvg from '../assets/icons/close-icon.svg';
 import searchSvg from '../assets/icons/search-icon.svg';
@@ -26,6 +28,8 @@ import pinSvg from '../assets/icons/pin-icon.svg';
 import logoSvg from '../assets/icons/logo-icon.svg';
 
 export type ISvgNames =
+  | 'grid-view'
+  | 'list-view'
   | 'heart'
   | 'close'
   | 'search'
@@ -55,6 +59,12 @@ const selectSvg = (name: ISvgNames, options?: any) => {
   let icon = burnSvg;
 
   switch (name) {
+    case 'grid-view':
+      icon = gridViewSvg;
+      break;
+    case 'list-view':
+      icon = listViewSvg;
+      break;
     case 'heart':
       icon = heartSvg;
       break;

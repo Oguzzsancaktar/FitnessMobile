@@ -9,3 +9,4 @@ export {default as MetricsCard} from './MetricsCard';
 export {default as LastTrainingCard} from './LastTrainingCard';
 export {default as TrainingResultCard} from './TrainingResultCard';
 export {default as StoriesCard} from './StoriesCard';
+export {default as TrainerPostsCard} from './TrainerPostsCard';
