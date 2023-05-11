@@ -1,8 +1,9 @@
 import React, {useReducer, useState} from 'react';
-import {Button, View, Text, ScrollView, Dimensions} from 'react-native';
+import {View, Text, ScrollView, Dimensions} from 'react-native';
 import {selectSvg} from '../../utils';
 import {
   Colors,
+  ESports,
   momentDashedDateFormat,
   momentDateTimeFormat,
 } from '../../constants';
@@ -11,8 +12,7 @@ import {Calendar} from 'react-native-calendars';
 import {TouchableOpacity} from 'react-native-gesture-handler';
 import moment from 'moment';
 import {AirbnbRating, Rating} from 'react-native-ratings';
-
-const sports = ['Yoga', 'Gym', 'Boxing', 'MMA', 'Crossfit', 'Pilates'];
+import {map} from 'lodash';
 
 const initialFilters = {
   sport: '',
@@ -35,13 +35,20 @@ const filterReducer = (state: any, action: any) => {
   }
 };
 
-const TrainerFilter = () => {
+interface IProps {
+  sport?: string;
+}
+const TrainerFilter: React.FC<IProps> = ({sport}) => {
   const [showCalendar, setShowCalendar] = useState(false);
   const [showRating, setShowRating] = useState(false);
 
-  const [filters, filtersDispatch] = useReducer(filterReducer, initialFilters);
+  const [filters, filtersDispatch] = useReducer(filterReducer, {
+    ...initialFilters,
+    sport: sport || '',
+  });
 
   const handleSportChange = (sport: string) => {
+    console.log('sport', sport);
     filtersDispatch({type: 'sport', payload: sport});
   };
 
@@ -103,7 +110,7 @@ const TrainerFilter = () => {
             },
           }}>
           <SelectDropdown
-            data={sports}
+            data={map(ESports, sport => sport)}
             // defaultValueByIndex={1}
             defaultValue={filters.sport}
             onSelect={(selectedItem, _) => {

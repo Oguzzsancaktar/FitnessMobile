@@ -1,9 +1,20 @@
 import React from 'react';
-import {Text, View} from 'react-native';
-import {Colors} from '../../constants';
+import {Text, TouchableOpacity, View} from 'react-native';
+import {ESports, SportColors} from '../../constants';
 import InfoItem from '../items/InfoItem';
 
-const SportListCard = () => {
+import map from 'lodash/map';
+import {ISvgNames} from '../../utils/selectSvg';
+import {slice} from 'lodash';
+
+interface IProps {
+  navigation: any;
+}
+const SportListCard: React.FC<IProps> = ({navigation}) => {
+  const handleItemClick = (sport: string) => {
+    navigation.navigate('Search', {sport});
+  };
+
   return (
     <View>
       <Text
@@ -23,22 +34,21 @@ const SportListCard = () => {
           alignItems: 'center',
           justifyContent: 'space-between',
           height: 130,
+          gap: 10,
         }}>
-        <View style={{flex: 1}}>
-          <InfoItem color={Colors.tenn} text="Running" icon="running" />
-        </View>
-
-        <View style={{flex: 1, marginHorizontal: 10}}>
-          <InfoItem color={Colors.blueZodiac} text="Football" icon="football" />
-        </View>
-
-        <View style={{flex: 1}}>
-          <InfoItem
-            color={Colors.priwinkleBlue}
-            text="Fitness"
-            icon="fitness"
-          />
-        </View>
+        {map(slice(Object.keys(ESports), 0, 3), sport => {
+          return (
+            <TouchableOpacity
+              onPress={() => handleItemClick('Running')}
+              style={{flex: 1}}>
+              <InfoItem
+                color={SportColors[sport]}
+                text={sport}
+                icon={sport.toLowerCase() as ISvgNames}
+              />
+            </TouchableOpacity>
+          );
+        })}
       </View>
       <View
         style={{
@@ -48,23 +58,21 @@ const SportListCard = () => {
           justifyContent: 'space-between',
           marginTop: 10,
           height: 130,
+          gap: 10,
         }}>
-        {/* <Image source={bottleIcon} style={{marginRight: 5}} /> */}
-        <View style={{flex: 1}}>
-          <InfoItem
-            color={Colors.eastSide}
-            text="Basketball"
-            icon="basketball"
-          />
-        </View>
-
-        <View style={{flex: 1, marginHorizontal: 10}}>
-          <InfoItem color={Colors.zombie} text="Cycling" icon="cycling" />
-        </View>
-
-        <View style={{flex: 1}}>
-          <InfoItem color={Colors.olivine} text="Yoga" icon="yoga" />
-        </View>
+        {map(slice(Object.keys(ESports), 3, 6), sport => {
+          return (
+            <TouchableOpacity
+              onPress={() => handleItemClick('Running')}
+              style={{flex: 1}}>
+              <InfoItem
+                color={SportColors[sport]}
+                text={sport}
+                icon={sport.toLowerCase() as ISvgNames}
+              />
+            </TouchableOpacity>
+          );
+        })}
       </View>
     </View>
   );

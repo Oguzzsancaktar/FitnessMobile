@@ -1,14 +1,31 @@
 import React from 'react';
 import {Text, View, Image} from 'react-native';
-import {Colors} from '../../constants';
+import {Colors, SportColors} from '../../constants';
 import {selectSvg} from '../../utils';
+import {ISvgNames} from '../../utils/selectSvg';
 
 const trainerImage = require('../../assets/trainer-profile.png');
 
-const TrainingSessionItem = () => {
+interface IProps {
+  bordered?: boolean;
+  highlightInfo?: boolean;
+  date?: string;
+  icon?: ISvgNames;
+  showRightArrow?: boolean;
+}
+
+const TrainingSessionItem: React.FC<IProps> = ({
+  bordered = false,
+  highlightInfo = false,
+  date = 'Tuesday, 02/05/2023',
+  icon = 'running',
+  showRightArrow = true,
+}) => {
   return (
     <View
       style={{
+        borderColor: Colors.priwinkleBlue,
+        borderWidth: bordered ? 1 : 0,
         backgroundColor: Colors.white,
         padding: 10,
         borderRadius: 10,
@@ -40,17 +57,23 @@ const TrainingSessionItem = () => {
         <Text
           style={{
             fontSize: 13,
-            fontWeight: '400',
+            fontWeight: highlightInfo ? '800' : '400',
             lineHeight: 16,
-            color: Colors.xanadu,
+            color: highlightInfo ? Colors.tenn : Colors.xanadu,
           }}>
-          Tuesday, 02/05/2023
+          {date}
         </Text>
       </View>
 
       <View style={{width: 40}}>
-        {selectSvg('running', {style: {color: Colors.tenn}})}
+        {selectSvg(icon, {style: {color: SportColors[icon]}})}
       </View>
+
+      {showRightArrow && (
+        <View style={{width: 10}}>
+          {selectSvg('chevron-right', {style: {color: Colors.blueZodiac}})}
+        </View>
+      )}
     </View>
   );
 };

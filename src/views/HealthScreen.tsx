@@ -13,6 +13,8 @@ import {createStackNavigator} from '@react-navigation/stack';
 import TrainingHistoryScreen from './TrainingHistoryScreen';
 import TrainingDetailScreen from './TrainingDetailScreen';
 import {TouchableOpacity} from 'react-native-gesture-handler';
+import {selectSvg} from '../utils';
+import {IScreenProps} from '../models';
 
 const Stack = createStackNavigator();
 
@@ -60,7 +62,9 @@ const MainStack = ({navigation}: any) => (
   </ScrollView>
 );
 
-const HealthScreen = () => {
+interface IProps extends IScreenProps {}
+
+const HealthScreen: React.FC<IProps> = ({navigation}) => {
   return (
     <Stack.Navigator
       screenOptions={{
@@ -72,12 +76,29 @@ const HealthScreen = () => {
       }}>
       <Stack.Screen
         options={{headerShown: false, headerTitle: ''}}
-        name="Home"
+        name="HealthHome"
         component={MainStack}
       />
       <Stack.Screen
         options={{
           headerTitle: '',
+          headerTintColor: Colors.blueZodiac,
+          headerBackTitleVisible: false,
+          headerBackTitle: '',
+          headerStyle: {
+            borderBottomColor: 'transparent',
+            shadowColor: 'transparent',
+            backgroundColor: Colors.alabaster,
+          },
+          headerLeft: () => (
+            <TouchableOpacity
+              onPress={() => navigation.navigate('HealthHome')}
+              style={{marginLeft: 40}}>
+              {selectSvg('chevron-left', {
+                style: {color: Colors.blueZodiac},
+              })}
+            </TouchableOpacity>
+          ),
         }}
         name="TrainingHistory"
         component={TrainingHistoryScreen}
@@ -86,6 +107,26 @@ const HealthScreen = () => {
       <Stack.Screen
         options={{
           headerTitle: '',
+          headerTintColor: Colors.blueZodiac,
+          headerBackTitleVisible: false,
+          headerBackTitle: '',
+          headerStyle: {
+            borderBottomColor: 'transparent',
+            shadowColor: 'transparent',
+            backgroundColor: Colors.alabaster,
+          },
+          headerLeft: props => {
+            console.log('props', props);
+            return (
+              <TouchableOpacity
+                onPress={() => navigation.navigate('HealthHome')}
+                style={{marginLeft: 40}}>
+                {selectSvg('chevron-left', {
+                  style: {color: Colors.blueZodiac},
+                })}
+              </TouchableOpacity>
+            );
+          },
         }}
         name="TrainingDetail"
         component={TrainingDetailScreen}

@@ -21,47 +21,78 @@ const TrainingHistoryScreen = ({navigation}: any) => {
         <TouchableOpacity
           onPress={() => navigation.navigate('TrainingDetail')}
           style={{marginVertical: 10}}>
-          <TrainingSessionItem />
+          <TrainingSessionItem
+            highlightInfo={true}
+            date="Tuesday, 02/05/2023 | 15:30"
+            icon="running"
+          />
         </TouchableOpacity>
         <TouchableOpacity
           onPress={() => navigation.navigate('TrainingDetail')}
           style={{marginVertical: 10}}>
-          <TrainingSessionItem />
+          <TrainingSessionItem
+            highlightInfo={true}
+            date="Tuesday, 02/05/2023 | 15:30"
+            icon="cycling"
+          />
         </TouchableOpacity>
         <TouchableOpacity
           onPress={() => navigation.navigate('TrainingDetail')}
           style={{marginVertical: 10}}>
-          <TrainingSessionItem />
+          <TrainingSessionItem
+            highlightInfo={true}
+            date="Tuesday, 02/05/2023 | 15:30"
+            icon="yoga"
+          />
         </TouchableOpacity>
         <TouchableOpacity
           onPress={() => navigation.navigate('TrainingDetail')}
           style={{marginVertical: 10}}>
-          <TrainingSessionItem />
+          <TrainingSessionItem
+            highlightInfo={true}
+            date="Tuesday, 02/05/2023 | 15:30"
+            icon="basketball"
+          />
         </TouchableOpacity>
         <TouchableOpacity
           onPress={() => navigation.navigate('TrainingDetail')}
           style={{marginVertical: 10}}>
-          <TrainingSessionItem />
+          <TrainingSessionItem
+            highlightInfo={true}
+            date="Tuesday, 02/05/2023 | 15:30"
+          />
         </TouchableOpacity>
         <TouchableOpacity
           onPress={() => navigation.navigate('TrainingDetail')}
           style={{marginVertical: 10}}>
-          <TrainingSessionItem />
+          <TrainingSessionItem
+            highlightInfo={true}
+            date="Tuesday, 02/05/2023 | 15:30"
+          />
         </TouchableOpacity>
         <TouchableOpacity
           onPress={() => navigation.navigate('TrainingDetail')}
           style={{marginVertical: 10}}>
-          <TrainingSessionItem />
+          <TrainingSessionItem
+            highlightInfo={true}
+            date="Tuesday, 02/05/2023 | 15:30"
+          />
         </TouchableOpacity>
         <TouchableOpacity
           onPress={() => navigation.navigate('TrainingDetail')}
           style={{marginVertical: 10}}>
-          <TrainingSessionItem />
+          <TrainingSessionItem
+            highlightInfo={true}
+            date="Tuesday, 02/05/2023 | 15:30"
+          />
         </TouchableOpacity>
         <TouchableOpacity
           onPress={() => navigation.navigate('TrainingDetail')}
           style={{marginVertical: 10}}>
-          <TrainingSessionItem />
+          <TrainingSessionItem
+            highlightInfo={true}
+            date="Tuesday, 02/05/2023 | 15:30"
+          />
         </TouchableOpacity>
       </ScrollView>
     </View>

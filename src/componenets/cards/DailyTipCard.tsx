@@ -1,6 +1,7 @@
 import React from 'react';
 import {Button, Text, View} from 'react-native';
 import {Colors} from '../../constants';
+import {selectSvg} from '../../utils';
 
 const FindTrainerCard = () => {
   return (
@@ -22,7 +23,9 @@ const FindTrainerCard = () => {
           alignItems: 'center',
           justifyContent: 'center',
         }}>
-        {/* <Image source={bottleIcon} style={{marginRight: 5}} /> */}
+        {selectSvg('bottle', {
+          style: {marginRight: 5, color: Colors.blueZodiac},
+        })}
         <Text>Did you start your day with 2 cups of water?</Text>
       </View>
       <View

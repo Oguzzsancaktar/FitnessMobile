@@ -4,3 +4,7 @@ export {default as SearchScreen} from './SearchScreen';
 export {default as TrainingHistoryScreen} from './TrainingHistoryScreen';
 export {default as TrainingDetailScreen} from './TrainingDetailScreen';
 export {default as TrainerProfile} from './TrainerProfile';
+export {default as CustomerApp} from './CustomerApp';
+export {default as TrainerApp} from './TrainerApp';
+export {default as TrainerMainScreen} from './TrainerMainScreen';
+export {default as RequestsScreen} from './RequestsScreen';

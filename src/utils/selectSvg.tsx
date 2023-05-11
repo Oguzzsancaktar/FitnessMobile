@@ -1,11 +1,16 @@
 import React from 'react';
 
+import chevronBottomSvg from '../assets/icons/chevron-bottom-icon.svg';
+import chevronRightSvg from '../assets/icons/chevron-right-icon.svg';
+import chevronLeftSvg from '../assets/icons/chevron-left-icon.svg';
+
+import requestsSvg from '../assets/icons/requests-icon.svg';
+import calendarSvg from '../assets/icons/calendar-icon.svg';
 import gridViewSvg from '../assets/icons/grid-view-icon.svg';
 import listViewSvg from '../assets/icons/list-view-icon.svg';
 import heartSvg from '../assets/icons/heart-icon.svg';
 import closeSvg from '../assets/icons/close-icon.svg';
 import searchSvg from '../assets/icons/search-icon.svg';
-import chevronBottomSvg from '../assets/icons/chevron-bottom-icon.svg';
 import arrowUpSvg from '../assets/icons/arrow-up-icon.svg';
 import timerSvg from '../assets/icons/timer-icon.svg';
 import burnSvg from '../assets/icons/burn-icon.svg';
@@ -28,6 +33,10 @@ import pinSvg from '../assets/icons/pin-icon.svg';
 import logoSvg from '../assets/icons/logo-icon.svg';
 
 export type ISvgNames =
+  | 'chevron-left'
+  | 'chevron-right'
+  | 'requests'
+  | 'calendar'
   | 'grid-view'
   | 'list-view'
   | 'heart'
@@ -59,6 +68,18 @@ const selectSvg = (name: ISvgNames, options?: any) => {
   let icon = burnSvg;
 
   switch (name) {
+    case 'chevron-left':
+      icon = chevronLeftSvg;
+      break;
+    case 'chevron-right':
+      icon = chevronRightSvg;
+      break;
+    case 'requests':
+      icon = requestsSvg;
+      break;
+    case 'calendar':
+      icon = calendarSvg;
+      break;
     case 'grid-view':
       icon = gridViewSvg;
       break;

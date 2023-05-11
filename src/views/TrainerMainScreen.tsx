@@ -1,9 +1,9 @@
 import React from 'react';
 import {View} from 'react-native';
 import {
-  DailyTipCard,
-  FindTrainerCard,
-  SportListCard,
+  StatisticsCard,
+  TopSportCard,
+  UpcomingTrainingTrainerCard,
   WelcomeUserCard,
 } from '../componenets';
 import {Colors} from '../constants';
@@ -12,10 +12,7 @@ interface IProps {
   navigation: any;
 }
 
-const MainScreen: React.FC<IProps> = ({navigation}) => {
-  const handleButtonClick = () => {
-    navigation.navigate('Search');
-  };
+const TrainerMainScreen: React.FC<IProps> = () => {
   return (
     <View
       style={{
@@ -29,15 +26,18 @@ const MainScreen: React.FC<IProps> = ({navigation}) => {
         secondLineText={'Back,' + 'SAM' + '!'}
       />
       <View style={{paddingVertical: 40}}>
-        <FindTrainerCard onClick={handleButtonClick} />
+        <UpcomingTrainingTrainerCard />
       </View>
 
-      <DailyTipCard />
-      <View style={{paddingVertical: 40}}>
-        <SportListCard navigation={navigation} />
+      <View>
+        <StatisticsCard />
+      </View>
+
+      <View style={{paddingVertical: 30}}>
+        <TopSportCard />
       </View>
     </View>
   );
 };
 
-export default MainScreen;
+export default TrainerMainScreen;
