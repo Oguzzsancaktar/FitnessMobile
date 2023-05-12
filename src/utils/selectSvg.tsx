@@ -4,6 +4,10 @@ import chevronBottomSvg from '../assets/icons/chevron-bottom-icon.svg';
 import chevronRightSvg from '../assets/icons/chevron-right-icon.svg';
 import chevronLeftSvg from '../assets/icons/chevron-left-icon.svg';
 
+import threeDotSvg from '../assets/icons/three-dot-icon.svg';
+import attachSvg from '../assets/icons/attach-icon.svg';
+import sendSvg from '../assets/icons/send-icon.svg';
+
 import requestsSvg from '../assets/icons/requests-icon.svg';
 import calendarSvg from '../assets/icons/calendar-icon.svg';
 import gridViewSvg from '../assets/icons/grid-view-icon.svg';
@@ -33,6 +37,9 @@ import pinSvg from '../assets/icons/pin-icon.svg';
 import logoSvg from '../assets/icons/logo-icon.svg';
 
 export type ISvgNames =
+  | 'send'
+  | 'attach'
+  | 'three-dot'
   | 'chevron-left'
   | 'chevron-right'
   | 'requests'
@@ -68,6 +75,15 @@ const selectSvg = (name: ISvgNames, options?: any) => {
   let icon = burnSvg;
 
   switch (name) {
+    case 'send':
+      icon = sendSvg;
+      break;
+    case 'attach':
+      icon = attachSvg;
+      break;
+    case 'three-dot':
+      icon = threeDotSvg;
+      break;
     case 'chevron-left':
       icon = chevronLeftSvg;
       break;

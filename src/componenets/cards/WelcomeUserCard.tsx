@@ -2,15 +2,21 @@ import React from 'react';
 import {Text, View, Image} from 'react-native';
 import {Colors} from '../../constants';
 import {selectSvg} from '../../utils';
+import {TouchableOpacity} from 'react-native-gesture-handler';
 
 const trainerImage = require('../../assets/trainer-profile.png');
 
 interface IProps {
   firstLineText: string;
   secondLineText: string;
+  onPhotoPress?: () => void;
 }
 
-const WelcomeUserCard: React.FC<IProps> = ({firstLineText, secondLineText}) => {
+const WelcomeUserCard: React.FC<IProps> = ({
+  firstLineText,
+  secondLineText,
+  onPhotoPress,
+}) => {
   return (
     <View>
       {selectSvg('logo', {
@@ -41,18 +47,37 @@ const WelcomeUserCard: React.FC<IProps> = ({firstLineText, secondLineText}) => {
             {secondLineText}
           </Text>
         </View>
-        <View
+        <TouchableOpacity
+          onPress={onPhotoPress}
           style={{
             width: 70,
             height: 70,
-            borderRadius: 50,
-            overflow: 'hidden',
-            borderStyle: 'solid',
-            borderWidth: 3,
-            borderColor: Colors.priwinkleBlue,
+            overflow: 'visible',
+            position: 'relative',
           }}>
-          <Image source={trainerImage} style={{width: 70, height: 70}} />
-        </View>
+          <View
+            style={{
+              position: 'absolute',
+              zIndex: 1,
+              width: 20,
+              height: 20,
+              backgroundColor: Colors.tenn,
+              borderRadius: 50,
+              bottom: 0,
+              right: 0,
+            }}
+          />
+          <Image
+            source={trainerImage}
+            style={{
+              width: 70,
+              height: 70,
+              borderColor: Colors.priwinkleBlue,
+              borderRadius: 50,
+              borderWidth: 3,
+            }}
+          />
+        </TouchableOpacity>
       </View>
     </View>
   );

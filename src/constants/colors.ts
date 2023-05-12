@@ -2,6 +2,7 @@ export const Colors = Object.freeze({
   white: '#ffffff',
   alabaster: '#fafafa',
   gray: '#E6E6E6',
+  gallery: '#EAEAEA',
 
   tundora: '#414141',
   xanadu: '#6C7970',

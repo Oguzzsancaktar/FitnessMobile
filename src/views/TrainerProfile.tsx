@@ -10,6 +10,7 @@ const TrainerProfile = () => {
   return (
     <ScrollView
       style={{
+        paddingVertical: 70,
         paddingHorizontal: 35,
         backgroundColor: Colors.alabaster,
       }}>

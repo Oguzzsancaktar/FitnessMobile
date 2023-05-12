@@ -8,3 +8,6 @@ export {default as CustomerApp} from './CustomerApp';
 export {default as TrainerApp} from './TrainerApp';
 export {default as TrainerMainScreen} from './TrainerMainScreen';
 export {default as RequestsScreen} from './RequestsScreen';
+export {default as NotificationsScreen} from './NotificationsScreen';
+export {default as ChatScreen} from './ChatScreen';
+export {default as ChatDetailScreen} from './ChatDetailScreen';

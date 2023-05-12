@@ -1,6 +1,12 @@
 import React from 'react';
 
-import {RequestsScreen, SearchScreen, TrainerMainScreen} from '.';
+import {
+  ChatScreen,
+  RequestsScreen,
+  SearchScreen,
+  TrainerMainScreen,
+  TrainerProfile,
+} from '.';
 import {View} from 'react-native';
 import {Colors} from '../constants';
 
@@ -108,7 +114,7 @@ const TrainerApp = () => {
       <Tab.Screen
         options={{headerShown: false}}
         name="Chat"
-        component={SearchScreen}
+        component={ChatScreen}
       />
 
       <Tab.Screen
@@ -125,7 +131,7 @@ const TrainerApp = () => {
       <Tab.Screen
         options={{headerShown: false}}
         name="Profile"
-        component={SearchScreen}
+        component={TrainerProfile}
       />
     </Tab.Navigator>
   );
